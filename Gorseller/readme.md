@@ -1,1 +1,5 @@
-
+![Simülasyon](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_1.png)
+![Form](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_2.png)
+![Nextion Editor GUI](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_3.png)
+![Test Görüntüsü](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rbitcoin.JPG)
+![Çevrimdışı Görüntüsü](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rcevrimdisi.JPG)
