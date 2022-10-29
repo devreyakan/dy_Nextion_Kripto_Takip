@@ -52,9 +52,10 @@ HMI dosyası 2.8" ekran boyutuna göre hazırlanmıştır fakat istediğiniz ekr
 
 <p align="center">
   <img src="https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rbitcoin.JPG" width="350" title="Simülasyon">
+  <img src="https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rcevrimdisi.JPG" width="350" title="Simülasyon">
 </p>
 
 
 <p align="center">
-  <img src="https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rcevrimdisi.JPG" width="350" title="Simülasyon">
+ 
 </p>
