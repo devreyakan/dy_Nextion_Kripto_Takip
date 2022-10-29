@@ -41,6 +41,10 @@ HMI dosyası 2.8" ekran boyutuna göre hazırlanmıştır fakat istediğiniz ekr
 
 ## Ekran Görüntüleri
 
+<p align="center">
+  <img src="https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_1.png" width="350" title="hover text">
+  <img src="https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_1.png" width="350" alt="accessibility text">
+</p>
 ![Simülasyon](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_1.png)
 ![Form](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_2.png)
 ![Nextion Editor GUI](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_3.png)
