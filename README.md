@@ -1,70 +1,48 @@
 
 # Nextion HMI Kripto Takip Uygulaması
+Nextion HMI Ekranları seri haberleşme yoluyla doğrudan bilgisayara bağlayabileceğiniz bu projede harici bir mikro denetleyici kullanmadan doğrudan bilgisayar üzerinden kullanabilmeniz amaçlanmıştır. Senaryo olarak, blockchain.info üzerinden güncel Bitcoin fiyatı çekilmiştir.
 
-devreyakan Araç Kutusu programı, maker* ve meraklılar için oluşturulmuş katılımsız çoklu program bütünüdür. Günlük kullanımda ihtiyaç duyulabilecek hesaplamalar, dönüştürmeler, seri konsol çıktıları gibi bir çok bileşeni içersinde barındırır. Güncellemelere ve geliştirilmeye sürekli devam edilecek bir uygulamadır.
+Detaylı bilgiler ve içerik: https://devreyakan.com/nextion-hmi-kripto-takip-uygulamasi-c
 
-İnternet bağlantınız olmadan bu programı kullanabilirsiniz, sadece güncel son 10 devreyakan.com yazısına ulaşamazsınız. 
+## Uyarı
+Bu programı kullanmadan önce mutlaka "Sermaye Piyasası Kurulunun Seri:V, No:55 Yatırım Danışmanlığı Faaliyetine ve Bu Faaliyette Bulunacak Kurumlara İlişkin Esaslar Hakkında Tebliğ’i Uyarınca Yayımlanan Uyarı Notu"nu okumanız gerekmektedir.
 
-Bu program hiç bir verinizi toplamaz ve kullanmaz.
+Kullanıcının verecekleri yatırım kararları ile bu proje ve sitede bulunan veriler, görüş ve bilgi arasında bir bağlantı kurulamayacağı gibi, söz konusu yorum/görüş/bilgilere daynılarak alınacak kararların neticesinde oluşabilecek yanlışlık veya zararlardan devreyakan.com ve repo sahibi sorumlu tutulamaz.
+
+Burada yer alan yatırım bilgi, yorum ve tavsiyeleri yatırım danışmanlığı kapsamında değildir. Yatırım danışmanlığı hizmeti, aracı kurumlar, portföy yönetim şirketleri, mevduat kabul etmeyen bankalar ile müşteri arasında imzalanacak yatırım danışmanlığı sözleşmesi çerçevesinde sunulmaktadır. Burada yer alan yorum ve tavsiyeler, yorum ve tavsiyede bulunanların kişisel görüşlerine dayanmaktadır. Bu görüşler, mali durumunuz ile risk ve getiri tercihlerinize uygun olmayabilir. Bu nedenle, sadece burada yer alan bilgilere dayanılarak yatırım kararı verilmesi, beklentilerinize uygun sonuçlar doğurmayabilir.
+
+Piyasa verileri blockchain.info tarafından sağlanmaktadır ve 15 dakika gecikmeli olarak yayınlanır. Kullanacağınız API'ye göre bu veriler değişmektedir.
+
+https://devreyakan.com/yasal-uyari/
 
 
+## Yükleme ve Kurulum
 
-## Yükleme 
-
-Programın güncel sürümü için doğrudan "guncel_surum.zip" klasörünü indirip istediğiniz yere çıkarabilirsiniz.
+Windows form .NET Framework 4.8, C# ile hazırlanmıştır.
 
 Git ile klonlamak için
 ```bash 
-https://github.com/devreyakan/arackutusu.git
+https://github.com/devreyakan/dy_Nextion_Kripto_Takip.git
 ```
  GitHub CLI ile klonlamak için
   ```bash 
-gh repo clone devreyakan/arackutusu
+gh repo clone devreyakan/dy_Nextion_Kripto_Takip
 ```  
-## Lisans
-
-[MIT](https://github.com/devreyakan/arackutusu/blob/main/LICENSE)
-
   
-## Optimizasyon
+## Optimizasyon ve İyileştirmeler
 
-.NET Framework 4.8 ve üzeri kurulu Windows tabanlı cihazlarda çalışmakta, ayrıca sanal bilgisayarla ile çalışmasında tespit edilen bir problem bulunmamakta.
-
-    Windows 7✔️
-    Windows 8 / 8.1✔️
-    Windows 10✔️
-    Windows 11✔️
+.NET Framework 4.8 ve üzeri kurulu Windows tabanlı cihazlarda çalışmaktadır. Zaman damgası içi NIST, Google, bilgisayar saatini kullanabilirsiniz. Bu kısımlar yorum olarak bırakılmıştır, kod üzerinde çalışır şekilde bilgisayar saati kullanılmaktadır. Google ya da NIST üzerinden zaman verisini çekerken try-catch ve sadece 4 saniyede bir veri çekmeniz daha iyi olacaktır. Örnek olması açısından verileri json formatı olarak çekerek işledik, burada istediğiniz API'yi kullanabilirsiniz, tamamen size kalmış durumda.
     
-## Araçlar ve Özellik Güncellemeleri
+## Cihaz Bilgileri
 
--V3-
+HMI dosyası 2.8" ekran boyutuna göre hazırlanmıştır fakat istediğiniz ekran boyutuna göre revize edebilirsiniz, windows form kısmında gönderdiğiniz verilerde obje isimleri ne ise HMI tasarımında aynı olmasına özen göstermeniz gerekmekte ve verileri HEX olarak göndermelisiniz.
 
-Karanlık arayüze geçiş yapılmıştır.(v3)
 
-LCD Ekran Simülasyonu ve LCD Özel karakter oluşturma kısmı eklenmiştir.(v3)
 
-555 Zamanlayacı(astable-monostable) hesaplama kısmı eklenmiştir.(v3)
-
--V2-
-
-V2 ile birlikte avrdude eklenmiştir, bu sayede .HEX dosyalarını atmel mikrodenetleyicilerine yükleyebilirsiniz.(v2)
-
-LED hesaplama aracı ile birlikte, seri ya da paralel bağlı LED modülleri için direnç ve güç hesabı yapabilirsiniz.(v2)
-
--V1-
-
-OHM Kanunu Hesaplama ile 2 bilinen değer ile istediğiniz bilinmeyen değeri bulabilirsiniz(v1)
-
-Seri ekran ile, geliştirme kartınıza ya da benzeri COM Port kullanan cihazlara istediğiniz hızda veri gönderebilir ve alabilirsiniz.(v1)
-
-Otomatik güncelleme servisi.(v1)
 ## Ekran Görüntüleri
 
-![Anasayfa](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/Anasayfa.png?raw=true)
-![Ohm Kanunu Hesaplama](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/Ohm%20Kanunu%20Hesaplama.png)
-![Seri Ekran](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/Seri%20Ekran.png)
-![LED Direnci Hesaplama](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/LED%20Direnci%20Hesaplama.png?raw=true)
-![HEX Yükleme Programı](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/Hex.png)
-![LCD Ekran Simülasyonu](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/LCD%20Ekran%20Simulasyonu.png)
-![LCD Ekran Özel Karakter](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/LCD%20Ozel%20Karakter.png)
-![555 Hesaplayıcı](https://github.com/devreyakan/arackutusu/blob/main/Ekran%20Görüntüleri/555.png)
+![Simülasyon](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_1.png)
+![Form](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_2.png)
+![Nextion Editor GUI](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/Screenshot_3.png)
+![Test Görüntüsü](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rbitcoin.JPG)
+![Çevrimdışı Görüntüsü](https://github.com/devreyakan/dy_Nextion_Kripto_Takip/blob/master/Gorseller/rcevrimdisi.JPG)
